@@ -1,0 +1,79 @@
+<!DOCTYPE html> 
+<html>
+<head>
+    <title>Nuclear charge</title>
+	
+	<style type="text/css">
+
+    TD {
+    border: 0px solid red; 
+	border-collapse: collapse; 
+	text-align: center
+    }
+	
+	table {
+	margin-top: 10%
+	}
+	
+	h1 {
+	margin-top: 3%;
+	font-size: 3.5vw
+	}
+	
+	button {
+	margin-top: 5%;
+	border-radius: 8px;
+	font-size: 1.6vw;
+	}
+	
+	h2 {
+	font-size: 5vw;
+	color: red;
+	margin-top: 4%
+	}	
+    </style>
+</head>
+<body>
+    <center>
+        <h1>Каков заряд ядра?</h1>
+    </center>
+	
+	<center>
+        <h2 id="res">2</h2>
+    </center>
+
+	<script>
+		function randomDice() {
+			var name = ["pic1", "pic2", "pic3", "pic4", "pic5"];
+			var pics = ["<img src='1.png' width = 50%>", "<img src='2.png' width = 50%>", "<img src='3.png' width = 50%>", 
+						"<img src='4.png' width = 50%>", "<img src='5.png' width = 50%>", "<img src='6.png' width = 50%>"];
+			var res = 0;
+			for (var i = 0; i < 5; i++) {
+				var rnd = Math.floor(Math.random()*6);
+				if (rnd%2 == 0) res += rnd;
+				element = document.getElementById(name[i]);
+				element.innerHTML = pics[rnd];
+			}
+			element = document.getElementById("res");
+			element.textContent = res;
+		}
+	</script>
+	
+	<table width = 70% border="0" align="center">
+
+        <tr>
+            <td id = "pic1" align = "center"><img src="2.png" alt = "" width = 50%></img></td>
+			<td id = "pic2" align = "center"><img src="4.png" alt = "" width = 50%></img></td>
+			<td id = "pic3" align = "center"><img src="1.png" alt = "" width = 50%></img></td>
+			<td id = "pic4" align = "center"><img src="6.png" alt = "" width = 50%></img></td>
+            <!-- considerng it is on the same folder that .html file // border = 3 -->
+            <td id = "pic5" align = "center"><img src="3.png" alt = "" width = 50%></img></td>
+        </tr>
+    </table>
+	
+	<center>
+        <button onclick = "randomDice();">Generate</button>
+    </center>
+	
+</body>
+<html>
