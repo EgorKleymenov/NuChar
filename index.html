@@ -43,13 +43,12 @@
     </center>
 	
     <center>
-        <h2 id="res"></h2>
+        <h2 id="res"> </h2>
     </center>
 
 	<script>
 		var res = 2;
 		function randomDice() {
-			alert(res);
 			var name = ["pic1", "pic2", "pic3", "pic4", "pic5"];
 			var pics = ["<img src='1.png' width = 50%>", "<img src='2.png' width = 50%>", "<img src='3.png' width = 50%>", 
 						"<img src='4.png' width = 50%>", "<img src='5.png' width = 50%>", "<img src='6.png' width = 50%>"];
@@ -61,11 +60,10 @@
 				element.innerHTML = pics[rnd];
 			}
 			element = document.getElementById("res");
-			element.textContent = "";
+			element.textContent = " ";
 		}
 		
 		function showAnswer() {
-			alert(res);
 			element = document.getElementById("res");
 			element.textContent = res;				
 		}
