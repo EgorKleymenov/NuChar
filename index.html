@@ -27,7 +27,7 @@
 	}
 		
 	button.show {
-	margin-top: 2%'	
+	margin-top: 1%'	
 	}
 	
 	h2 {
@@ -47,11 +47,12 @@
     </center>
 
 	<script>
+		var res = 2;
 		function randomDice() {
 			var name = ["pic1", "pic2", "pic3", "pic4", "pic5"];
 			var pics = ["<img src='1.png' width = 50%>", "<img src='2.png' width = 50%>", "<img src='3.png' width = 50%>", 
 						"<img src='4.png' width = 50%>", "<img src='5.png' width = 50%>", "<img src='6.png' width = 50%>"];
-			var res = 0;
+			res = 0;
 			for (var i = 0; i < 5; i++) {
 				var rnd = Math.floor(Math.random()*6);
 				if (rnd%2 == 0) res += rnd;
@@ -59,7 +60,12 @@
 				element.innerHTML = pics[rnd];
 			}
 			element = document.getElementById("res");
-			element.textContent = res;
+			element.textContent = "";
+		}
+		
+		function showAnswer() {
+			element = document.getElementById("res");
+			element.textContent = res;				
 		}
 	</script>
 	
