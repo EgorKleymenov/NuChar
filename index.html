@@ -60,12 +60,13 @@
 				element.innerHTML = pics[rnd];
 			}
 			element = document.getElementById("res");
-			element.textContent = " ";
+			element.style.color = "white";
+			element.textContent = res;
 		}
 		
 		function showAnswer() {
 			element = document.getElementById("res");
-			element.textContent = res;				
+			element.text = "red";				
 		}
 	</script>
 	
